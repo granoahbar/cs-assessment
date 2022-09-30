@@ -1,0 +1,32 @@
+tinyArray
+insert 17.542 μs
+append 49.459 μs
+
+smallArray
+insert 29.291 μs
+append 82.292 μs
+
+mediumArray
+insert 148.75 μs
+append 104.875 μs
+
+largeArray
+insert 7.00325 ms
+append 413.667 μs
+
+extraLargeArray
+insert 705.344458 ms
+append 1.842 ms
+
+ANSWER PARAGRAPH
+
+    I see that the unshift method seems to be slower then the push method. 
+    This is because the unshift method is having to loop through every index
+    of the given array ans shift everything down 1 in order to allow room for 
+    the new index. The push method just appends the new index to the end of 
+    the array. So, no matter how long the array is that is given, it should take
+    a similar amount of time to run the function. The push method scales better
+    for this same reason just discussed. The unshift/insert is seeming to scale
+    exponentially, but I think that is just because of the size of arrays
+    being passed in. Thus the larger the array passed in, the more it is going to
+    have to run in order to pass in the new index. That would be an O(n) comp.
